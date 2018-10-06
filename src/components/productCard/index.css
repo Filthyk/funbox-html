@@ -39,7 +39,7 @@
     }
   }
   &__wrap {
-    flex: 1 1 100%;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     color: var(--c-blue);
