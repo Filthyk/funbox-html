@@ -1,0 +1,138 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &--disabled {
+    pointer-events: none;
+  }
+  &--selected {
+    &:not(.hover-prevent):hover {
+      .product-card__from-default {
+        display: none;
+      }
+      .product-card__from-hovered {
+        display: block;
+      }
+    }
+  }
+  &__back {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+
+    &--bg {
+      z-index: -1;
+      path {
+        fill: #fff;
+      }
+    }
+    &--border {
+      z-index: 1;
+      path {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 4;
+      }
+    }
+  }
+  &__wrap {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--c-blue);
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    transition: .5s;
+
+    .product-card--selected & {
+      color: var(--c-red);
+    }
+    .product-card--disabled & {
+      color: var(--c-gray2);
+    }
+  }
+  &__info {
+    color: var(--c-black);
+    padding: 20px 50px;
+    padding-bottom: 10px;
+
+    .product-card--disabled & {
+      opacity: 0.5;
+    }
+  }
+  &__from {
+    color: var(--c-gray);
+    margin-bottom: 15px;
+  }
+  &__from-hovered {
+    display: none;
+    color: var(--c-red);
+  }
+  &__title,
+  &__subtitle {
+    font-weight: 700;
+  }
+  &__title {
+    font-size: 48px;
+  }
+  &__subtitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  &__param {
+    font-size: 14px;
+    color: var(--c-gray);
+    margin: 2px 0;
+  }
+  &__param-val {
+    font-weight: 700;
+  }
+  &__image-wrap {
+    height: 270px;
+    margin-top: auto;
+  }
+  &__image {
+    margin-left: -15px;
+
+    .product-card--disabled & {
+      opacity: 0.5;
+    }
+  }
+  &__bottom {
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+
+    .product-card--disabled & {
+      color: var(--c-yellow);
+    }
+  }
+  &__weight {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: currentColor;
+  }
+  &__weight-val,
+  &__weight-title {
+    line-height: 1;
+    color: var(--c-white);
+  }
+  &__weight-val {
+    font-size: 42px;
+  }
+  &__weight-title {
+    font-size: 21px;
+  }
+}
