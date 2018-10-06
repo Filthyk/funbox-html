@@ -3,7 +3,7 @@ module.exports = {
     plugins: {
         'postcss-easy-import': {},
         'autoprefixer': {
-            browsers: ['defaults', 'not ie < 11'],
+            browsers: ['defaults', 'ie >= 11'],
         },
         'postcss-mixins': {},
         'postcss-nested': {},
