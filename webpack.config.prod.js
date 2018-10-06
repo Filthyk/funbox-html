@@ -32,7 +32,7 @@ const config = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        outputPath: '/',
+                        useRelativePath: true,
                         name: '[path][name].[ext]'
                     }
                 },

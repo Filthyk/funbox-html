@@ -38,7 +38,6 @@ const config = {
                 use: {
                     loader: 'file-loader',
                     options: {
-                        outputPath: '/',
                         name: '[path][name].[ext]'
                     }
                 },
