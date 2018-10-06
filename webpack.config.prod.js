@@ -9,7 +9,6 @@ const config = {
     output: {
         path: path.join(__dirname, 'docs'),
         filename: 'bundle.[hash].js',
-        publicPath: '/',
     },
     module: {
         rules: [
