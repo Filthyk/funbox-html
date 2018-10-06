@@ -3,12 +3,14 @@ module.exports = {
     plugins: {
         'postcss-easy-import': {},
         'autoprefixer': {
-            browsers: ['defaults', 'ie >= 11'],
+            browsers: ['defaults', 'ie >= 11']
         },
         'postcss-mixins': {},
         'postcss-nested': {},
         'postcss-custom-properties': {},
-        'postcss-custom-media': {},
+        'postcss-custom-media': {
+            importFrom: './src/resources/styles/media.css'
+        },
         'postcss-nesting': {},
         'postcss-input-style': {},
         'postcss-extend': {},

@@ -47,12 +47,9 @@ a {
 
 .page-section {
   width: 100%;
+  display: flex;
 
   &--index {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &__title-wrap {
@@ -67,6 +64,14 @@ a {
   }
 
   &__wrap {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__body {
     width: 100%;
   }
 }
